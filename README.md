@@ -31,10 +31,6 @@ Sistema web para análise de inconsistências de sinais contábeis baseado em ar
 - JavaScript (ES6+)
 - DOM Parser para XML
 
-## 📱 Screenshots
-
-![Interface Principal](screenshot.png)
-
 ## 🤝 Contribuições
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
