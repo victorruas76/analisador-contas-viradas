@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analisador Contas Viradas</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+<header>
+<h1>Analisador Contas Viradas</h1>
+<p>Sistema de Análise de Inconsistências de Sinais Contábeis</p>
+</header>
+
+<div class="upload-section">
+<div class="upload-box" id="uploadBox">
+<div class="upload-icon">📄</div>
+<p>Clique aqui ou arraste o arquivo CADOC 4060</p>
+<p class="file-info">Formatos aceitos: XML, TXT (máx. 10MB)</p>
+<input type="file" id="fileInput" accept=".xml,.txt" hidden>
+</div>
+</div>
+
+<div class="loading" id="loading" style="display: none;">
+<div class="spinner"></div>
+<p>Processando arquivo...</p>
+</div>
+
+<div class="results-section" id="resultsSection" style="display: none;">
+<div class="summary-cards">
+<div class="summary-card">
+<h3>Total de Contas</h3>
+<span id="totalContas">0</span>
+</div>
+<div class="summary-card error">
+<h3>Inconsistências</h3>
+<span id="totalInconsistencias">0</span>
+</div>
+<div class="summary-card success">
+<h3>Consistentes</h3>
+<span id="totalConsistentes">0</span>
+</div>
+</div>
+
+<div class="filter-section">
+<select id="grupoFilter">
+<option value="">Todos os Grupos</option>
+</select>
+<select id="statusFilter">
+<option value="">Todos os Status</option>
+<option value="inconsistente">Apenas Inconsistentes</option>
+<option value="consistente">Apenas Consistentes</option>
+</select>
+</div>
+
+<div class="table-container">
+<table id="resultsTable">
+<thead>
+<tr>
+<th>Grupo</th>
+<th>Código da Conta</th>
+<th>Sinal Definido</th>
+<th>Soma dos Valores</th>
+<th>Sinal Calculado</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody id="tableBody">
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="error-message" id="errorMessage" style="display: none;">
+<h3>Erro ao processar arquivo</h3>
+<p id="errorText"></p>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
