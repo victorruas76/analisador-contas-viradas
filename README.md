@@ -42,3 +42,6 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull r
 ## 📄 Licença
 
 MIT License
+
+
+
